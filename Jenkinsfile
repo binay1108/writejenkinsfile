@@ -19,4 +19,16 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            echo 'Always run this no matter if pipeline is successful or failed'
+            echo 'Build Status is ----'
+        }
+        success {
+            echo 'The buld has been successful'
+        }
+        failure {
+            echo ' The build has failed'
+        }
+    }
 }
